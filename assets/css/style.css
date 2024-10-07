@@ -149,6 +149,7 @@ li, a {
 
 .section-about {
     display: flex;
+    padding-left: 90px;
     flex-direction: column;
     justify-content: center;
 }
@@ -247,6 +248,7 @@ li, a {
     font-family: "Protest Guerrilla", sans-serif;
 }
 
+
 .images-picture {
     display: grid;
     margin-bottom: 40px;
@@ -269,6 +271,7 @@ li, a {
 }
 
 .pictures-videos video {
+    display: flex;
     padding: 10px;
     max-width: 300px;
     border-radius: 10px;
@@ -280,6 +283,7 @@ li, a {
 
 .localization {
     margin: 90px;
+    padding-left: 90px;
 }
 
 .localization .image-title {
@@ -318,10 +322,11 @@ li, a {
 }
 
 .outher-description img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     margin: 20px 0;
-    border-radius: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px #DDA0DD;
 }
 
 .group-media{
@@ -347,4 +352,30 @@ li, a {
     font-size: 18px;
     margin-left: 10px;
     letter-spacing: 1px;
+}
+
+.whats-contact{
+    top: 90%;
+    left: 80%;
+    right: 0px;
+    bottom: 0%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+    background: linear-gradient(45deg, #452c63, #FFF, #DDA0DD, #FFF, #452c63);
+}
+
+.whats-contact:hover{
+    opacity: 75%;
+}
+
+.bottom-whats img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
