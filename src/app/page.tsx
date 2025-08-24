@@ -1,6 +1,6 @@
 const Page = () =>{
   return(
-    <div>
+    <div className="container mx-auto">
       star dance
     </div>
   );
