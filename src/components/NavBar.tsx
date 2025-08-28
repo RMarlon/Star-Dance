@@ -10,7 +10,7 @@ export const NavBar = ({ menu }: NavProps) => {
         <>
             {menu.map(item => (
                 <div key={item.id}>
-                    <div className="flex justify-center gap-10 items-center mt-10 font-display text-black">
+                    <div className="hidden sm:flex sm:justify-center gap-10 sm:items-center mt-10 font-display text-black">
                         <div>
                             <ul className="flex gap-4">
                                 <li>
