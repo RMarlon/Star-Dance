@@ -5,6 +5,8 @@ export type MobileNavBar = {
     galery: string[];
 
     images: string;
+    imagesClose: string;
+    imagesMenuBurger: string;
 
     videos: string[];
     audition: string[];

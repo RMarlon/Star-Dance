@@ -8,6 +8,8 @@ export const listMobileMenu: MobileNavBar[] = [
         galery:['Nossa Galeria', '#galeria'],
 
         images: 'images/logo2.png',
+        imagesClose:'images/close.svg',
+        imagesMenuBurger: 'images/menuBurger.svg',
 
         videos: ['Vídeos', '#videos'],
         audition: ['Audições', '#audiçoes']
