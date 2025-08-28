@@ -11,9 +11,11 @@ export const MobileMenu = ({ mobileNav }: PropsMobile) => {
             {mobileNav.map(menu => (
                 <div key={menu.id} className="font-display text-black">
 
-                    <div className="absolute right-10 top-20">
-                        {/* <img src="" alt="" /> */}
-                        <img src={menu.imagesMenuBurger} alt="botão menu hamburger" className="w-10"/>
+                    <div className="relative flex justify-between items-center">
+                        <img src={menu.images} alt="imagem da logo" className="w-40 h-40 rounded-full"/>
+                        <button className="absolute right-10 top-8">
+                            <img src={menu.imagesMenuBurger} alt="botão menu hamburger" className="w-10" />
+                        </button>
                     </div>
 
                     <div className="w-70 h-screen fixed top-0 right-0 border translate-x-full  duration-300 ease-in-out">
