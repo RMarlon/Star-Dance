@@ -3,12 +3,12 @@ import { MenuBar } from "@/types/MenuBar";
 export const listNav: MenuBar[] = [
     {
         id:1,
-        about:'Sobre nós',
-        galery:'Nossa Galeria',
+        about:['Sobre nós', '#sobre'],
+        galery:['Nossa Galeria', '#galeria'],
 
         images: 'images/logo2.png',
 
-        videos: 'Vídeos',
-        audition: 'Audições'
+        videos: ['Vídeos', '#videos'],
+        audition: ['Audições', '#audiçoes']
     }
 ];
