@@ -1,5 +1,6 @@
 "use client"
 
+import { About } from "@/components/About";
 import { MobileMenu } from "@/components/MobileMenu";
 import { NavBar } from "@/components/NavBar";
 import { listMobileMenu } from "@/data/listMobileMenu";
@@ -21,6 +22,10 @@ const Page = () =>{
 
       <section>
         <NavBar menu={listNav}/>
+      </section>
+
+      <section>
+        <About />
       </section>
     </div>
   );
