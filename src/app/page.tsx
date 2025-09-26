@@ -3,6 +3,7 @@
 import { About } from "@/components/About";
 import { MobileMenu } from "@/components/MobileMenu";
 import { NavBar } from "@/components/NavBar";
+import { listAbout } from "@/data/listAbout";
 import { listMobileMenu } from "@/data/listMobileMenu";
 import { listNav } from "@/data/listNav";
 
@@ -25,7 +26,7 @@ const Page = () =>{
       </section>
 
       <section>
-        <About />
+        <About we={listAbout}/>
       </section>
     </div>
   );

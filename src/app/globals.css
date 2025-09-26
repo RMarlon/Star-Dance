@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import "tailwindcss";
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -19,6 +20,7 @@ html{
 
 @theme {
   --font-display: "Rubik Distressed", sans-serif;
+  --font-display-1: "Quicksand", sans-serif;
   --font-display--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   --font-display--font-variation-settings: "opsz" 32;
 }
@@ -26,9 +28,16 @@ html{
 @font-face {
   font-family: "Rubik Distressed", system-ui;
   font-style: normal;
-  font-weight:200 400;
+  font-weight: 200 400;
   font-display: swap;
   src: url("/public/fonts/Rubik_Distressed/RubikDistressed-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300 700;
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: dark) {

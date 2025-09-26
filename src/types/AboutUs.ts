@@ -1,4 +1,6 @@
 export type AboutUs = {
     id: number;
-    about: string;
+    title: string;
+    goupImg: string;
+    about: string[];
 }
