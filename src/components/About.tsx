@@ -1,12 +1,17 @@
 import { AboutUs } from "@/types/AboutUs";
+import { Slider } from "@/components/Slider";
+import { listSliderData } from "@/data/listSliderData";
+
+import { Swiper} from 'swiper/react';
 
 type PropsAbout = {
     we: AboutUs[];
 }
-export const About = ({we}:PropsAbout) =>{
-    return(
+
+export const About = ({ we }: PropsAbout) => {
+    return (
         <>
-            {we.map(item =>(
+            {we.map(item => (
                 <div key={item.id}>
                     <div className="text-black flex flex-col items-center lg:flex-row lg:justify-around font-display-1 px-10 py-4">
                         <div className="w-[600px]">
@@ -14,15 +19,14 @@ export const About = ({we}:PropsAbout) =>{
                                 {item.about[0]}
                             </p>
 
-                            <p className="w-[380px] sm:w-[600px] m-auto text-justify py-7 text-gray-700 font-medium">
+                            <p className="w-[380px] sm:w-[600px] m-auto text-justify py-7 text-gray-700 font-medium p-10">
                                 {item.about[1]}
                             </p>
                         </div>
+                        <Swiper>
 
-                        <div>
-                            <img src={item.goupImg} alt="imagens do grupo star dance" className="w-full"/>
-                            <h2 className="text-center text-xl pt-4 font-display">{item.title}</h2>
-                        </div>
+                            <Slider data={listSliderData} />
+                        </Swiper>
                     </div>
                 </div>
             ))}
