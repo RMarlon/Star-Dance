@@ -12,11 +12,11 @@ export const NavBar = ({ menu }: NavProps) => {
                 <div key={item.id}>
                     <div className="hidden sm:flex sm:justify-center gap-10 sm:items-center mt-10 font-display text-black">
                         <div>
-                            <ul className="flex gap-4">
+                            <ul className="flex gap-10">
                                 <li>
                                     <Link href={item.about[1]}
-                                        className="hover:shadow shadow-gray-600 hover:py-2 hover:px-1 hover:border-b 
-                                        hover:border-purple-600 hover:pb-2 rounded-md duration-200 ease-in-out
+                                        className="hover:border-b 
+                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.about[0]}
@@ -25,8 +25,8 @@ export const NavBar = ({ menu }: NavProps) => {
 
                                 <li>
                                     <Link href={item.galery[1]}
-                                        className="hover:shadow shadow-gray-600 hover:py-2 hover:px-1 hover:border-b 
-                                        hover:border-purple-600 hover:pb-2 rounded-md duration-200 ease-in-out
+                                        className="hover:border-b 
+                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.galery[0]}
@@ -36,11 +36,11 @@ export const NavBar = ({ menu }: NavProps) => {
                         </div>
                         <img src={item.images} alt="logo star dance" className="w-40 h-40 rounded-full " />
                         <div className="">
-                            <ul className="flex gap-4">
+                            <ul className="flex gap-10">
                                 <li>
                                     <Link href={item.videos[1]}
-                                        className="hover:shadow shadow-gray-600 hover:py-2 hover:px-1 hover:border-b 
-                                        hover:border-purple-600 hover:pb-2 rounded-md duration-200 ease-in-out
+                                        className="hover:border-b 
+                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.videos[0]}
@@ -48,8 +48,8 @@ export const NavBar = ({ menu }: NavProps) => {
                                 </li>
                                 <li>
                                     <Link href={item.audition[1]}
-                                        className="hover:shadow shadow-gray-600 hover:py-2 hover:px-1 hover:border-b 
-                                        hover:border-purple-600 hover:pb-2 rounded-md duration-200 ease-in-out
+                                        className="hover:border-b 
+                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.audition[0]}
