@@ -34,7 +34,7 @@ export const Slider = ({ data }: PropsSlider) => {
                         <img
                             src={item.image}
                             alt="Slider images"
-                            className="w-full h-[450px] rounded-md "
+                            className="w-full h-[450px] rounded-md border border-white"
                         />
                     </SwiperSlide>
                 ))}
