@@ -2,6 +2,7 @@
 
 import { About } from "@/components/About";
 import { Banner } from "@/components/Banner";
+import { Galery } from "@/components/Galery";
 import { MobileMenu } from "@/components/MobileMenu";
 import { NavBar } from "@/components/NavBar";
 import { listAbout } from "@/data/listAbout";
@@ -25,6 +26,7 @@ const Page = () =>{
         <NavBar menu={listNav}/>
         <Banner banner={listBanner}/>
         <About we={listAbout}/>
+        <Galery/>
       
     </div>
   );
