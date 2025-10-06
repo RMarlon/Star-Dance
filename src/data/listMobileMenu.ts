@@ -4,14 +4,14 @@ export const listMobileMenu: MobileNavBar[] = [
     {
         id:1,
 
-        about:['Sobre nós', '#sobre'],
-        galery:['Nossa Galeria', '#galeria'],
+        about:['Sobre nós', '#about'],
+        galery:['Nossa Galeria', '#galery'],
 
         images: 'images/logo2.png',
         imagesClose:'images/close.svg',
         imagesMenuBurger: 'images/menuBurger.svg',
 
         videos: ['Vídeos', '#videos'],
-        audition: ['Audições', '#audiçoes']
+        audition: ['Audições', '#auditions']
     }
 ];

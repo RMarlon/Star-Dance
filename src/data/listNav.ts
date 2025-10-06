@@ -4,11 +4,11 @@ export const listNav: MenuBar[] = [
     {
         id:1,
         about:['Sobre nós', '#about'],
-        galery:['Nossa Galeria', '#galeria'],
+        galery:['Nossa Galeria', '#galery'],
 
         images: 'images/logo2.png',
 
         videos: ['Vídeos', '#videos'],
-        audition: ['Audições', '#audiçoes']
+        audition: ['Audições', '#auditions']
     }
 ];
