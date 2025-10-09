@@ -7,27 +7,34 @@ import { MobileMenu } from "@/components/MobileMenu";
 import { NavBar } from "@/components/NavBar";
 import { listAbout } from "@/data/listAbout";
 import { listBanner } from "@/data/listBanner";
+import { listGalery } from "@/data/listGalery";
 import { listMobileMenu } from "@/data/listMobileMenu";
 import { listNav } from "@/data/listNav";
 
-const Page = () =>{
 
-  const toggleMenu = () =>{
-      const menu = document.querySelector('#menu');
-      menu?.classList.toggle('translate-x-full');
+const Page = () => {
+  
+
+  const toggleMenu = () => {
+    const menu = document.querySelector('#menu');
+    menu?.classList.toggle('translate-x-full');
   }
 
-  return(
+  const openModal = (id: number) => {
+
+  }
+
+
+  return (
     <div className="container mx-auto bg-white rounded-md shadow-2xl shadow-gray-600">
 
       <section>
-        <MobileMenu mobileNav={listMobileMenu} openMenu={toggleMenu} closeMenu={toggleMenu}/>
+        <MobileMenu mobileNav={listMobileMenu} openMenu={toggleMenu} closeMenu={toggleMenu} />
       </section>
-        <NavBar menu={listNav}/>
-        <Banner banner={listBanner}/>
-        <About we={listAbout}/>
-        <Galery/>
-      
+      <NavBar menu={listNav} />
+      <Banner banner={listBanner} />
+      <About we={listAbout} />
+      <Galery img={listGalery} handleClick={() => { }} />
     </div>
   );
 }
