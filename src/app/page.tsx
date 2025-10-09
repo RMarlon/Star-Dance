@@ -13,17 +13,11 @@ import { listNav } from "@/data/listNav";
 
 
 const Page = () => {
-  
 
   const toggleMenu = () => {
     const menu = document.querySelector('#menu');
     menu?.classList.toggle('translate-x-full');
   }
-
-  const openModal = (id: number) => {
-
-  }
-
 
   return (
     <div className="container mx-auto bg-white rounded-md shadow-2xl shadow-gray-600">
@@ -31,10 +25,12 @@ const Page = () => {
       <section>
         <MobileMenu mobileNav={listMobileMenu} openMenu={toggleMenu} closeMenu={toggleMenu} />
       </section>
+
       <NavBar menu={listNav} />
       <Banner banner={listBanner} />
       <About we={listAbout} />
       <Galery img={listGalery} handleClick={() => { }} />
+
     </div>
   );
 }
