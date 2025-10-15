@@ -2,6 +2,8 @@ import { listGalery } from "@/data/listGalery";
 import { GaleryUs } from "@/types/GaleryUs";
 import { useState } from "react";
 import { Modal } from "./Modal";
+import { SocialMedia } from "./SocialMedia";
+import { listSocialMedia } from "@/data/listSocialMedia";
 
 type PropsGaley = {
     img: GaleryUs[];
@@ -28,6 +30,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
         <div className="bg-white">
             <h2 className="flex items-center justify-between font-display text-2xl text-black text-right py-6 px-10">
                 <img src="images/moudura.png" alt="imagem de moudura" />
+                    <SocialMedia medias={listSocialMedia}/>
                 Galeria Star Dance
             </h2>
             <div className="border-b text-gray-500"></div>
