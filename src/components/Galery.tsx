@@ -12,15 +12,15 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
     const [modal, setModal] = useState(false);
     const [imageModal, setImageModal] = useState('');
 
-    const openModal = (id: number) =>{
+    const openModal = (id: number) => {
         const picture = listGalery.find(item => item.id === id);
-        if(picture){
+        if (picture) {
             setImageModal(picture.image);
             setModal(true);
         }
     }
 
-    const closeModal = () =>{
+    const closeModal = () => {
         setModal(false);
     }
 
@@ -38,7 +38,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                     sei que outros estão por vir, e sempre daremos nosso melhor!
                 </p>
                 <div className="hidden md:block mr-10">
-                    <img src="images/logo2.png" alt="imagem logo" />
+                    <img src="images/logo2.png" alt="imagem logo" className="w-60 h-40"/>
                 </div>
             </div>
 
@@ -55,9 +55,9 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                     </>
                 ))}
             </div>
-                {modal &&
-                    <Modal image={imageModal} closeModal={closeModal}/>
-                }
+            {modal &&
+                <Modal image={imageModal} closeModal={closeModal} />
+            }
         </div>
     );
 }
