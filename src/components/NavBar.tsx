@@ -1,3 +1,4 @@
+"use client"
 import { MenuBar } from "@/types/MenuBar";
 import Link from "next/link";
 

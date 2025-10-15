@@ -1,3 +1,4 @@
+"use client"
 import { MobileNavBar } from "@/types/MobileNavBar";
 import Link from "next/link";
 
