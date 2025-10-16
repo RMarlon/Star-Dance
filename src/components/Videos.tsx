@@ -9,13 +9,13 @@ export const Videos = ({play}:PropsVideos) => {
         <div className="bg-black">
             <h2 className="flex items-center justify-between font-display text-2xl text-white text-right py-6 px-10">
                 Vídeos Star Dance
-                <img src="images/videos.png" alt="imagem icone videos" />
+                <img src="images/videos.png" alt="imagem icone videos" className="w-15"/>
             </h2>
             <div className="border-b text-gray-500"></div>
             <div className="flex justify-around items-center">
 
                 <div className="hidden md:block ml-10">
-                    <img src="images/logo2.png" alt="imagem logo" />
+                    <img src="images/logo2.png" alt="imagem logo" className="w-60 h-30"/>
                 </div>
 
                 <p className="text-gray-600 text-lg px-10 py-10 font-display-1 lg:py-0">
