@@ -25,8 +25,8 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
     }
 
     return (
-        <div className="bg-white">
-            <h2 className="flex items-center justify-between font-display text-2xl text-black text-right py-6 px-10">
+        <div className="bg-white py-10">
+            <h2 className="flex items-center justify-between font-display text-2xl text-black text-right pb-4 px-10">
                 <img src="images/moudura.png" alt="imagem de moudura" />
                 Galeria Star Dance
             </h2>
@@ -38,7 +38,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                     sei que outros estão por vir, e sempre daremos nosso melhor!
                 </p>
                 <div className="hidden md:block mr-10">
-                    <img src="images/logo2.png" alt="imagem logo" />
+                    <img src="images/logo2.png" alt="imagem logo" className="w-60 h-30"/>
                 </div>
             </div>
 
