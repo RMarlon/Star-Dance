@@ -23,7 +23,7 @@ export const MobileMenu = ({ mobileNav, openMenu, closeMenu }: PropsMobile) => {
                         </button>
                     </div>
 
-                    <div id="menu" className="w-70 h-screen fixed top-0 right-0  translate-x-full duration-300 ease-in-out bg-black">
+                    <div id="menu" className="w-70 h-screen fixed top-0 right-0  translate-x-full duration-300 ease-in-out bg-black z-90">
 
                         <div className="flex justify-between items-center px-10 pt-4">
                             <h1 className="">Star Dance ⭐</h1>
