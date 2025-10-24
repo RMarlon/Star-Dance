@@ -1,6 +1,7 @@
 "use client"
 
 import { About } from "@/components/About";
+import { Auditions } from "@/components/Auditions";
 import { Banner } from "@/components/Banner";
 import { Galery } from "@/components/Galery";
 import { MobileMenu } from "@/components/MobileMenu";
@@ -39,6 +40,8 @@ const Page = () => {
       <section className="pb-10">
         <Videos play={listVideos}/>
       </section>
+
+      <Auditions />
 
     </div>
   );
