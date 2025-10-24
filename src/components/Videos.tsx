@@ -1,4 +1,6 @@
 import { VideosUs } from "@/types/VideosUs";
+import { SocialMedia } from "./SocialMedia";
+import { listSocialMedia } from "@/data/listSocialMedia";
 
 type PropsVideos = {
     play: VideosUs[];
@@ -9,9 +11,10 @@ export const Videos = ({play}:PropsVideos) => {
         <div className="bg-black pb-10">
             <h2 className="flex items-center justify-between font-display text-2xl text-white text-right py-6 px-10">
                 Vídeos Star Dance
+                <SocialMedia medias={listSocialMedia}/>
                 <img src="images/videos.png" alt="imagem icone videos" className="w-15"/>
-
             </h2>
+            
             <div className="border-b text-gray-500"></div>
             <div className="flex justify-around items-center">
 
@@ -29,8 +32,8 @@ export const Videos = ({play}:PropsVideos) => {
             <div
                 className="container max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
                 bg-gray-800 bg-cover shadow shadow-white py-2 px-2
-                bg-radial-[at_25%_25%] from-white to-zinc-900 to-75% xl:rounded-md "
-            >
+                bg-radial-[at_25%_25%] from-white to-zinc-900 to-75% xl:rounded-md">
+                    
                 {play.map(item => (
                     <>
                         <div key={item.id}>

@@ -27,12 +27,17 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
     }
 
     return (
-        <div className="bg-white pb-10">
-            <h2 className="flex items-center justify-between font-display text-2xl text-black text-right pb-4 px-10">
+        <div className="bg-white py-10">
+
+            <div className="flex flex-row-reverse items-center justify-between pb-4 px-10">
+                <h2 className="font-display text-2xl text-black">Galeria Star Dance</h2>
+                <section className="ml-90">
+                    <SocialMedia medias={listSocialMedia} />
+                </section>
                 <img src="images/moudura.png" alt="imagem de moudura" />
-                    <SocialMedia medias={listSocialMedia}/>
-                Galeria Star Dance
-            </h2>
+            </div>
+
+
             <div className="border-b text-gray-500"></div>
             <div className="flex justify-around items-center">
                 <p className="text-gray-600 text-lg px-10 py-10 font-display-1 lg:py-0">
@@ -41,7 +46,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                     sei que outros estão por vir, e sempre daremos nosso melhor!
                 </p>
                 <div className="hidden md:block mr-10">
-                    <img src="images/logo2.png" alt="imagem logo" className="w-60 h-30"/>
+                    <img src="images/logo2.png" alt="imagem logo" className="w-60 h-30" />
                 </div>
             </div>
 
