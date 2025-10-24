@@ -27,26 +27,28 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
     }
 
     return (
-        <div className="bg-white py-10">
+        <div className="bg-white py-6">
 
-            <div className="flex flex-row-reverse items-center justify-between pb-4 px-10">
+            <div
+                className="flex flex-col items-center 
+                sm:flex-row-reverse sm:justify-between sm:items-center pb-4 px-10">
                 <h2 className="font-display text-2xl text-black">Galeria Star Dance</h2>
-                <section className="ml-90">
+                <section className="mt-4 lg:mt-0">
                     <SocialMedia medias={listSocialMedia} />
                 </section>
-                <img src="images/moudura.png" alt="imagem de moudura" />
+                <img src="images/moudura.png" alt="imagem de moudura" className="hidden xl:block" />
             </div>
 
 
             <div className="border-b text-gray-500"></div>
-            <div className="flex justify-around items-center">
-                <p className="text-gray-600 text-lg px-10 py-10 font-display-1 lg:py-0">
+            <div className="flex flex-col-reverse justify-around items-center md:flex-row">
+                <p className="text-gray-600 text-justify text-lg font-display-1 px-10 py-10">
                     Essas são nossas imagens, elas mostram nossos momentos em apresentações e ensaios.
                     Cada um deles é o que mantem nosso grupo unido e atuando até hoje. Somos gratos a esses momentos, e
                     sei que outros estão por vir, e sempre daremos nosso melhor!
                 </p>
-                <div className="hidden md:block mr-10">
-                    <img src="images/logo2.png" alt="imagem logo" className="w-60 h-30" />
+                <div className="mr-10">
+                    <img src="images/logo2.png" alt="imagem logo" className="w-40 md:w-90  lg:w-60 lg:h-30" />
                 </div>
             </div>
 
