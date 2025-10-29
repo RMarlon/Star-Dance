@@ -11,7 +11,11 @@ export const Auditions = () => {
             <div className="px-10 pb-4 flex flex-row-reverse justify-between items-center">
                 <h2 className="font-display text-black text-2xl">Audições</h2>
                 <SocialMedia medias={listSocialMedia} />
-                <img src="images/kpop.png" alt="icone kpop" className="hidden lg:block" />
+                <img
+                    src="images/kpop.png"
+                    alt="icone kpop"
+                    className="hidden lg:block"
+                />
             </div>
             <div className="border-b text-gray-500"></div>
 
@@ -25,15 +29,24 @@ export const Auditions = () => {
 
                     <h3 className="text-black font-display py-4 text-2xl">Venha ser um Star 🪩</h3>
                     <form action="" className="flex flex-col gap-4">
-                        <input type="text" placeholder="Digite seu nome"
-                            className="border border-black text-gray-600 outline-0 text-center px-4 py-2 rounded-md" />
-                        <input type="text" placeholder="Digite sua idade"
-                            className="border border-black text-gray-600 outline-0 text-center px-4 py-2 rounded-md" />
+                        <input
+                            type="text"
+                            placeholder="Digite seu nome"
+                            className="border border-black text-gray-600 
+                            outline-0 text-center px-4 py-2 rounded-md"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Digite sua idade"
+                            className="border border-black text-gray-600 
+                            outline-0 text-center px-4 py-2 rounded-md"
+                        />
+
 
                         <section>
-                                <Localization
-                                    local={listLocaliations}
-                                /> 
+                            <Localization
+                                local={listLocaliations}
+                            />
                         </section>
                     </form>
                     <button
@@ -45,9 +58,17 @@ export const Auditions = () => {
                         Enviar sua inscrição
                     </button>
                 </div>
-                <img src="images/logo.jpg" alt="" className="h-40 hidden xl:block" />
+                <img
+                    src="images/logo.jpg"
+                    alt="logo star dance"
+                    className="h-40 hidden xl:block"
+                />
                 <div className="">
-                    <img src="images/img8-sf.png" alt="" className="" />
+                    <img
+                        src="images/img8-sf.png"
+                        alt="image grupo star dance"
+                        className=""
+                    />
                 </div>
             </div>
         </div>
