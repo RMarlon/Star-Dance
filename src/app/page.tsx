@@ -3,6 +3,7 @@
 import { About } from "@/components/About";
 import { Auditions } from "@/components/Auditions";
 import { Banner } from "@/components/Banner";
+import { Footer } from "@/components/Footer";
 import { Galery } from "@/components/Galery";
 import { Information } from "@/components/Information";
 import { MobileMenu } from "@/components/MobileMenu";
@@ -26,25 +27,22 @@ const Page = () => {
   return (
     <div className="container mx-auto bg-white rounded-md shadow-2xl shadow-gray-600">
 
-      <section>
-        <MobileMenu mobileNav={listMobileMenu} openMenu={toggleMenu} closeMenu={toggleMenu} />
-      </section>
+        <section>
+          <MobileMenu mobileNav={listMobileMenu} openMenu={toggleMenu} closeMenu={toggleMenu} />
+        </section>
+        <NavBar menu={listNav} />
+        <Banner banner={listBanner} />
+        <About we={listAbout} />
+        <section className="pb-10">
+          <Galery img={listGalery} handleClick={() => { }} />
+        </section>
+        <section className="pb-10">
+          <Videos play={listVideos} />
+        </section>
+        <Auditions />
+        <Information />
+        <Footer />
 
-      <NavBar menu={listNav} />
-      <Banner banner={listBanner} />
-      <About we={listAbout} />
-      
-      <section className="pb-10">
-        <Galery img={listGalery} handleClick={() => { }} />
-      </section>
-      
-      <section className="pb-10">
-        <Videos play={listVideos}/>
-      </section>
-
-      <Auditions />
-
-      <Information />
     </div>
   );
 }
