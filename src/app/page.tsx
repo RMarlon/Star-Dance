@@ -4,6 +4,7 @@ import { About } from "@/components/About";
 import { Auditions } from "@/components/Auditions";
 import { Banner } from "@/components/Banner";
 import { Galery } from "@/components/Galery";
+import { Information } from "@/components/Information";
 import { MobileMenu } from "@/components/MobileMenu";
 import { NavBar } from "@/components/NavBar";
 import { Videos } from "@/components/Videos";
@@ -43,6 +44,7 @@ const Page = () => {
 
       <Auditions />
 
+      <Information />
     </div>
   );
 }
