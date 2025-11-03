@@ -19,7 +19,7 @@ export const Auditions = () => {
             </div>
             <div className="border-b text-gray-500"></div>
 
-            <p className="max-w-[700px] font-display-1 text-2xl text-gray-600 px-10 pt-4 text-justify text-shadow-sm">
+            <p className="max-w-[700px] font-display-1 text-gray-600 px-10 pt-4 text-justify text-shadow-sm">
                 Se você é uma pessoa que gosta de K-pop, e quer ter oportunidades
                 de dançar em eventos, então sinta-se convidado(a) e faça sua inscrição
                 abaixo!

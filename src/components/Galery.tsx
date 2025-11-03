@@ -33,7 +33,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                 className="flex flex-col items-center 
                 sm:flex-row-reverse sm:justify-between sm:items-center pb-4 px-10">
                 <h2 className="font-display text-2xl text-black">Galeria Star Dance</h2>
-                <section className="mt-4 lg:mt-0">
+                <section className="xl:ml-[7.4rem] ">
                     <SocialMedia medias={listSocialMedia} />
                 </section>
                 <img src="images/moudura.png" alt="imagem de moudura" className="hidden xl:block" />
