@@ -1,7 +1,7 @@
 export const Footer = () => {
     return (
         <div>
-            <div className="bg-white flex items-center justify-between px-6 mb-4">
+            <div className="bg-white flex items-center justify-between px-6 xl:mb-4 rounded">
                 <div className="flex items-center justify-center">
                     <a
                         href="https://marlondevnoob.com.br/"
