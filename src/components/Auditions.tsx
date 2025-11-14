@@ -5,11 +5,11 @@ import { listLocaliations } from "@/data/listLocalizations";
 
 
 export const Auditions = () => {
-
+  
     return (
         <div>
-            <div className="px-10 pb-4 flex flex-row-reverse justify-between items-center">
-                <h2 className="font-display text-black text-2xl">Audições</h2>
+            <div id="auditions" className="px-10 pb-4 flex flex-col justify-between items-center xl:flex-row-reverse">
+                <h2 className="font-display text-black text-2xl pb-3">Audições</h2>
                 <SocialMedia medias={listSocialMedia} />
                 <img
                     src="images/kpop.png"
@@ -25,19 +25,24 @@ export const Auditions = () => {
                 abaixo!
             </p>
             <div className="flex flex-col-reverse items-center justify-around px-10 py-10 md:flex-row">
-                <div className="h- border border-gray-600 px-20 rounded-md shadow shadow-gray-600">
+                <div
+                    className="max-w-[500px] w-full border border-gray-600 px-20 
+                    rounded-md shadow shadow-gray-600"
+                >
 
-                    <h3 className="text-black font-display py-4 text-2xl">Venha ser um Star 🪩</h3>
+                    <h3 className="text-black font-display py-4 text-center text-xl md:text-2xl">Venha ser um Star 🪩</h3>
                     <form action="" className="flex flex-col gap-4">
+                        
                         <input
                             type="text"
                             placeholder="Digite seu nome"
                             className="border border-black text-gray-600 
                             outline-0 text-center px-4 py-2 rounded-md"
                         />
+                        <span className="text-center text-gray-700 font-display-1">Data de nascimento</span>
                         <input
-                            type="text"
-                            placeholder="Digite sua idade"
+                            type="date"
+                            placeholder="01/02/2000"
                             className="border border-black text-gray-600 
                             outline-0 text-center px-4 py-2 rounded-md"
                         />

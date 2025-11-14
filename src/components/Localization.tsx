@@ -7,7 +7,7 @@ type ProppsPlace = {
 export const Localization = ({ local }: ProppsPlace) => {
     return (
         <div>
-            <p className="text-center py-4 text-gray-600">Qual é o seu bairro?</p>
+            <p className="text-center py-4 text-gray-600">De onde você vem?</p>
             <select name="" className="w-full text-gray-600 text-center">
                 {local.map(item => (
                     <>

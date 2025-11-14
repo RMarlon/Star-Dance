@@ -30,6 +30,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
         <div className="bg-white py-6">
 
             <div
+                id="galery"
                 className="flex flex-col items-center 
                 sm:flex-row-reverse sm:justify-between sm:items-center pb-4 px-10">
                 <h2 className="font-display text-2xl text-black">Galeria Star Dance</h2>

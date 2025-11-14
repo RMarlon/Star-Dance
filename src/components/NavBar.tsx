@@ -11,13 +11,16 @@ export const NavBar = ({ menu }: NavProps) => {
         <>
             {menu.map(item => (
                 <div key={item.id}>
-                    <div className="hidden sm:flex sm:justify-center md:gap-10 sm:items-center mt-10 font-display text-black">
+                    <div 
+                    className="hidden sm:flex sm:justify-center md:gap-10 sm:items-center mt-4 font-display text-black
+                    "
+                    >
                         <div>
                             <ul className="flex gap-10">
                                 <li>
                                     <Link href={item.about[1]}
                                         className="hover:border-b 
-                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
+                                        hover:border-gray-400 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.about[0]}
@@ -27,7 +30,7 @@ export const NavBar = ({ menu }: NavProps) => {
                                 <li>
                                     <Link href={item.galery[1]}
                                         className="hover:border-b 
-                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
+                                        hover:border-gray-400 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.galery[0]}
@@ -35,13 +38,13 @@ export const NavBar = ({ menu }: NavProps) => {
                                 </li>
                             </ul>
                         </div>
-                        <img src={item.images} alt="logo star dance" className="w-40 h-40 rounded-full " />
+                        <img src={item.images} alt="logo star dance" className="w-40 h-40" />
                         <div className="">
                             <ul className="flex gap-10">
                                 <li>
                                     <Link href={item.videos[1]}
                                         className="hover:border-b 
-                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
+                                        hover:border-gray-400 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.videos[0]}
@@ -50,7 +53,7 @@ export const NavBar = ({ menu }: NavProps) => {
                                 <li>
                                     <Link href={item.audition[1]}
                                         className="hover:border-b 
-                                        hover:border-purple-600 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
+                                        hover:border-gray-400 hover:opacity-80 hover:pb-2 duration-300 ease-in-out
                                         "
                                     >
                                         {item.audition[0]}

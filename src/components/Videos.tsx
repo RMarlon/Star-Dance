@@ -9,7 +9,7 @@ type PropsVideos = {
 export const Videos = ({ play }: PropsVideos) => {
     return (
         <div className="bg-black py-6">
-            <div className="flex flex-col items-center 
+            <div id="videos" className="flex flex-col items-center 
                 sm:flex-row sm:justify-between sm:items-center pb-4 px-10">
                 <h2 className="font-display text-2xl text-white mt-4 mb-4">Vídeos Star Dance</h2>
                 <section className="xl:mr-[15rem]">
