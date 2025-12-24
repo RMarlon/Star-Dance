@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-}
-
 /* tanalidades de cores  */
 :root {
     --White: #FFFFFF;
@@ -30,6 +24,7 @@
     min-height: 100vh;
     background:var(--GhostWhite);
     color: var(--text-color);
+    overflow: hidden;
 }
 
 .wrapper {
@@ -37,6 +32,20 @@
     width: 66rem;
     height: 45rem;
     padding: 2rem;
+    perspective: 250rem;
+    animation: show-animate 2s forwards;
+}
+
+@keyframes show-animate{
+    0%, 30%{
+        opacity: 0;
+        transform: rotate(-20deg);
+    }
+
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
 }
 
 .cover{
@@ -56,6 +65,11 @@
     z-index: -1;
 }
 
+.cover.cover-right{
+    z-index: 100;
+    transition: transform 1s cubic-bezier(.645, .045, .355, 1);
+}
+
 .cover.cover-right.turn{
     transform: rotateY(180deg);
 }
@@ -65,6 +79,7 @@
     width: 100%;
     height: 100%;
     display: flex;
+    perspective: 250rem;
 }
 
 .book .book-page{
@@ -77,6 +92,10 @@
     padding: 2rem;
 }
 
+.book-page.page-left{
+    box-shadow: -.6rem .6rem .6rem rgba(0, 0, 0, .1);
+}
+
 .profile-page{
     display: flex;
     flex-direction: column;
@@ -84,10 +103,15 @@
     align-items: center;
 }
 
-.profile-page .logo {
+.profile-page img {
     max-width: 180px;
     border-radius: 50%;
     margin-bottom: .8rem;
+}
+
+.profile-page h1{
+    font-size: 2.7rem;
+    line-height: 1;
 }
 
 .profile-page .title{
@@ -114,6 +138,7 @@
     background: transparent;
     border: var(--second-text-color);
     border-radius: 50%;
+    font-size: 1.3rem;
     color: var(--border);
     margin: 0 .2rem;
     transition: .5s;
@@ -140,12 +165,23 @@
     width: 9.5rem;
     height: 3rem;
     background: #333;
-    border: #000;
+    border:1px solid #000;
     border-radius: .3rem;
     font-size: 1rem;
     color: var(--White);
     font-weight: 500;
     transition: 0.5s;
+    margin: 0 1rem;
+}
+
+.btn-box .btn:nth-child(2){
+    background: transparent;
+    color: var(--text-color);
+}
+
+.btn-box .btn:nth-child(2):hover{
+    background: #333;
+    color: var(--White);
 }
 
 .btn:hover{
@@ -158,6 +194,12 @@
     position: absolute;
     right: 0;
     transform-style:preserve-3d;
+    transform-origin:left;
+    transition: transform 1s cubic-bezier(.645, .045, .355, 1);
+}
+
+.book-page.page-right.turn{
+    transform: rotateY(-180deg);
 }
 
 .book-page .page-front,
@@ -204,4 +246,33 @@
 }
 .workeduc-content .year{
     color: #001;
+}
+
+.number-page{
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nexprev-btn{
+    position: absolute;
+    bottom: .9rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.nexprev-btn:hover{
+    /* opacity: 70%; */
+}
+
+.nexprev-btn.back{
+    left: 1.5rem;
 }
