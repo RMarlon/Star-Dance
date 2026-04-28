@@ -269,10 +269,6 @@
     transition: .5s;
 }
 
-.nexprev-btn:hover{
-    /* opacity: 70%; */
-}
-
 .nexprev-btn.back{
     left: 1.5rem;
 }

@@ -116,12 +116,14 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                 coverRightRef.current?.classList.add('turn');
             }, 2100);
 
+            // Remove a capa direita do fluxo após a virada
             setTimeout(() => {
                 if (coverRightRef.current) {
                     coverRightRef.current.style.zIndex = '-1';
                 }
             }, 2800);
 
+            // ZIndex da página esquerda fixo
             setTimeout(() => {
                 if (pageLeftRef.current) {
                     pageLeftRef.current.style.zIndex = '20';
@@ -208,7 +210,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                             </div>
                         </div>
                         {/* page 1 & 2 */}
-                        <div className="book-page page-right turn" id="turn-1">
+                        <div className="book-page page-right turn" style={{ zIndex: 10 }} id="turn-1">
                             <div className="page-front">
                                 <h1 className="title">Memorias</h1>
 
@@ -219,7 +221,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                         <div>
                                             {img.map(item => (
                                                 <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
+                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
                                                 </div>
                                             ))}
                                         </div>
@@ -245,7 +247,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                         <div>
                                             {img.map(item => (
                                                 <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
+                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
                                                 </div>
                                             ))}
                                         </div>
@@ -263,7 +265,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                         </div>
                         {/* page 3 & 4 */}
 
-                        <div className="book-page page-right turn" id="turn-2">
+                        <div className="book-page page-right turn" style={{ zIndex: 9 }} id="turn-2">
                             {/* page 3 */}
                             <div className="page-front">
                                 <h1 className="title">Memorias</h1>
@@ -274,7 +276,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                         <div>
                                             {img.map(item => (
                                                 <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
+                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
                                                 </div>
                                             ))}
                                         </div>
@@ -301,7 +303,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                         <div>
                                             {img.map(item => (
                                                 <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
+                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
                                                 </div>
                                             ))}
                                         </div>
@@ -320,7 +322,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
 
                         {/* page 5 & 6 */}
 
-                        <div className="book-page page-right turn" id="turn-3">
+                        <div className="book-page page-right turn" style={{ zIndex: 8 }} id="turn-3">
                             <div className="page-front">
                                 <h1 className="title">Memorias</h1>
                                 <div className="workeduc-box">
@@ -330,7 +332,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                         <div>
                                             {img.map(item => (
                                                 <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
+                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
                                                 </div>
                                             ))}
                                         </div>
