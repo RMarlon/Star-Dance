@@ -4,11 +4,11 @@ export const Footer = () => {
             <div className="bg-white flex items-center justify-between px-6 xl:mb-4 rounded">
                 <div className="flex items-center justify-center">
                     <a
-                        href="https://marlondevnoob.com.br/"
+                        href="https://github.com/RMarlon"
                         target="_blank"
                         className="flex items-center justify-center duration-300 ease-in-out hover:opacity-80">
                         <img src="images/copy.svg" alt="copyright" className="w-6 h-6" />
-                        <small className="text-[#410085] font-display-1 pl-1">[Dev]-Noob</small>
+                        <small className="text-gray-500 font-display-1 pl-1">Todos os direitos reservados</small>
                     </a>
                 </div>
                 <div className="">

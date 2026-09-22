@@ -342,8 +342,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                         </p>
 
                                         <div className="btn-box back-profile">
-                                            <a href="#" className="btn contact-me">Venha fazer parte</a>
-                                            {/* <a href="#" className="btn back-profile">Rever</a> */}
+                                            <a href="#auditions" className="btn contact-me">Venha fazer parte</a>
                                         </div>
                                     </div>
                                 </div>
