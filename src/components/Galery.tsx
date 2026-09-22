@@ -198,15 +198,8 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                 </div>
 
                                 <p>
-                                    Essas são nossas imagens, elas mostram nossos momentos em apresentações e ensaios.
-                                    Cada um deles é o que mantem nosso grupo unido e atuando até hoje. Somos gratos a esses momentos, e
-                                    sei que outros estão por vir, e sempre daremos nosso melhor!
+                                    Obserem agora as nossas memórias, e vejam o quanto crescemos. E se gostaram do que viram, venham fazer parte do nosso grupo.
                                 </p>
-
-                                <div className="btn-box">
-                                    <a href="#" className="btn contact-me">Venha fazer parte</a>
-                                    {/* <a href="#" className="btn">Futuro</a> */}
-                                </div>
                             </div>
                         </div>
                         {/* page 1 & 2 */}
@@ -218,16 +211,13 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                     <div className="workeduc-content">
                                         <span className="year">2020 - 2021</span>
                                         <h3>Nosso desenvolvimento</h3>
-                                        <div>
+                                        <div className="gap-3">
                                             {img.map(item => (
-                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
+                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer rounded-md">
+                                                    <img src={item.image} alt="imagens do grupo star dance" className="container max-w-5xl mx-auto h-60 py-1 rounded-md duration-500 transition ease-in-out hover:opacity-80 " />
                                                 </div>
                                             ))}
                                         </div>
-                                        {modal &&
-                                            <Modal image={imageModal} closeModal={closeModal} />
-                                        }
                                     </div>
                                 </div>
 
@@ -244,16 +234,13 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                     <div className="workeduc-content">
                                         <span className="year">2020 - 2021</span>
                                         <h3>Nosso desenvolvimento</h3>
-                                        <div>
+                                        <div className="">
                                             {img.map(item => (
-                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
+                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer overflow-hidden rounded-md">
+                                                    <img src={item.image} alt="imagens do grupo star dance" className="container max-w-5xl mx-auto h-60 py-1 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
                                                 </div>
                                             ))}
                                         </div>
-                                        {modal &&
-                                            <Modal image={imageModal} closeModal={closeModal} />
-                                        }
                                     </div>
                                 </div>
 
@@ -273,16 +260,13 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                     <div className="workeduc-content">
                                         <span className="year">2020 - 2021</span>
                                         <h3>Nosso desenvolvimento</h3>
-                                        <div>
+                                        <div className="gap-3">
                                             {img.map(item => (
-                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
+                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer overflow-hidden rounded-md">
+                                                    <img src={item.image} alt="imagens do grupo star dance" className="container max-w-5xl mx-auto h-60 py-1 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
                                                 </div>
                                             ))}
                                         </div>
-                                        {modal &&
-                                            <Modal image={imageModal} closeModal={closeModal} />
-                                        }
                                     </div>
                                 </div>
 
@@ -300,16 +284,13 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                     <div className="workeduc-content">
                                         <span className="year">2020 - 2021</span>
                                         <h3>Nosso desenvolvimento</h3>
-                                        <div>
+                                        <div className="gap-3">
                                             {img.map(item => (
-                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
+                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer overflow-hidden rounded-md">
+                                                    <img src={item.image} alt="imagens do grupo star dance" className="container max-w-5xl mx-auto h-60 py-1 rounded-md duration-500 transition ease-in-out hover:opacity-80" />
                                                 </div>
                                             ))}
                                         </div>
-                                        {modal &&
-                                            <Modal image={imageModal} closeModal={closeModal} />
-                                        }
                                     </div>
                                 </div>
 
@@ -321,7 +302,6 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                         </div>
 
                         {/* page 5 & 6 */}
-
                         <div className="book-page page-right turn" style={{ zIndex: 8 }} id="turn-3">
                             <div className="page-front">
                                 <h1 className="title">Memorias</h1>
@@ -329,16 +309,13 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                                     <div className="workeduc-content">
                                         <span className="year">2020 - 2021</span>
                                         <h3>Nosso desenvolvimento</h3>
-                                        <div>
+                                        <div className="gap-3">
                                             {img.map(item => (
-                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer">
-                                                    {/* <img src={item.image} alt="imagens do grupo star dance" className="w-[450px] h-[250px] pt-2 rounded-md duration-500 transition ease-in-out hover:opacity-80" /> */}
+                                                <div key={item.id} onClick={() => openModal(item.id)} className="cursor-pointer overflow-hidden rounded-md">
+                                                    <img src={item.image} alt="imagens do grupo star dance" className="container max-w-5xl mx-auto h-60 py-1 rounded-md duration-500 transition ease-in-out hover:opacity-80" />;
                                                 </div>
                                             ))}
                                         </div>
-                                        {modal &&
-                                            <Modal image={imageModal} closeModal={closeModal} />
-                                        }
                                     </div>
                                 </div>
 
@@ -380,6 +357,7 @@ export const Galery = ({ img, handleClick }: PropsGaley) => {
                     </div>
                 </div>
             </div>
+            {modal && <Modal image={imageModal} closeModal={closeModal} />}
         </div>
     );
 }
