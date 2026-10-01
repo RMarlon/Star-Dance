@@ -1,0 +1,233 @@
+/*
+ * Álbum mobile: uma página por vez.
+ * Só aparece abaixo de 768px. A partir daí volta o livro de duas páginas
+ * (galery.css). As cores vêm das variáveis definidas em :root no galery.css.
+ */
+
+.m-album {
+    display: none;
+}
+
+@keyframes m-turn-next {
+    from { transform: rotateY(-75deg); opacity: .15; }
+    to   { transform: rotateY(0deg);   opacity: 1; }
+}
+
+@keyframes m-turn-prev {
+    from { transform: rotateY(75deg); opacity: .15; }
+    to   { transform: rotateY(0deg);  opacity: 1; }
+}
+
+@media (max-width: 767px) {
+    /* esconde o livro de duas páginas (especificidade maior que .body) */
+    .body.desktop-album {
+        display: none;
+    }
+
+    .m-album {
+        display: block;
+        padding: 1rem;
+        background: var(--GhostWhite);
+        color: var(--text-color);
+    }
+
+    /* "capa" do álbum, com a lombada um pouco mais larga à esquerda */
+    .m-book {
+        height: calc(100vh - 7rem);
+        height: calc(100svh - 7rem);
+        min-height: 28rem;
+        padding: .5rem .5rem .5rem .9rem;
+        background: var(--cover-color);
+        border-radius: .6rem;
+        box-shadow: var(--box-shadow);
+    }
+
+    /* folha de papel fixa; só o conteúdo anima ao virar */
+    .m-sheet {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 1.25rem 1.25rem .5rem;
+        background: var(--pages-color);
+        border-radius: .3rem;
+        box-shadow: inset .4rem 0 .6rem -.4rem rgba(0, 0, 0, .18);
+        perspective: 120rem;
+        touch-action: pan-y; /* swipe horizontal é nosso; scroll vertical continua */
+    }
+
+    .m-content {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .m-turn-next {
+        transform-origin: left center;
+        animation: m-turn-next .6s cubic-bezier(.645, .045, .355, 1) both;
+    }
+
+    .m-turn-prev {
+        transform-origin: right center;
+        animation: m-turn-prev .6s cubic-bezier(.645, .045, .355, 1) both;
+    }
+
+    .m-title {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: .75rem;
+    }
+
+    /* linha do tempo, igual à do desktop */
+    .m-timeline {
+        position: relative;
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        border-left: var(--border);
+        padding-left: 1.2rem;
+    }
+
+    .m-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -.65rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: #333;
+        border-radius: 50%;
+    }
+
+    .m-year {
+        color: #001;
+    }
+
+    /* as fotos dividem a altura disponível (duas fotos = metade cada) */
+    .m-photos {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+        margin-top: .5rem;
+        overflow-y: auto;
+    }
+
+    .m-photo {
+        position: relative;
+        flex: 1 0 8rem;
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: none;
+        border-radius: .375rem;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .m-photo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* capa e página final */
+    .m-center {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .75rem;
+        text-align: center;
+        overflow-y: auto;
+    }
+
+    .m-center h3 {
+        font-size: 1.25rem;
+    }
+
+    .m-cover-title {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .m-logo {
+        max-width: 7.5rem;
+        border-radius: 50%;
+    }
+
+    .m-center p {
+        text-align: justify;
+        color: var(--second-text-color);
+        font-size: .95rem;
+    }
+
+    .m-cta {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 2.75rem;
+        padding: 0 1.5rem;
+        background: #333;
+        border: 1px solid #000;
+        border-radius: .3rem;
+        color: var(--White);
+        font-weight: 500;
+    }
+
+    /* setas + contador */
+    .m-controls {
+        display: grid;
+        grid-template-columns: 2.75rem 1fr 2.75rem;
+        align-items: center;
+        margin-top: .5rem;
+    }
+
+    .m-nav {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.75rem;  /* alvo de toque confortável */
+        height: 2.75rem;
+        padding: 0;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .m-nav img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .m-nav:disabled {
+        visibility: hidden;
+    }
+
+    .m-count {
+        text-align: center;
+        font-size: .875rem;
+    }
+
+    .m-nav:focus-visible,
+    .m-photo:focus-visible,
+    .m-cta:focus-visible {
+        outline: 2px solid #333;
+        outline-offset: 2px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .m-turn-next,
+    .m-turn-prev {
+        animation: none;
+    }
+}
